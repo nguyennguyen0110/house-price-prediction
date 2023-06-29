@@ -209,11 +209,11 @@ def do_upload_file(path):
             # Check valid value
             for key in valid_data_category.keys():
                 if data[key] not in valid_data_category[key]:
-                    return "Invalid value(s). Check readme file for details."
+                    return "Invalid category value(s). Check readme file for details."
             
             for key in valid_data_numerical:
                 if type(data[key]) != int and type(data[key]) != float:
-                    return "Invalid value(s). Check readme file for details."
+                    return "Invalid number value(s). Check readme file for details."
             
             # One-hot coding for category features
             for field in one_hot_fields:
